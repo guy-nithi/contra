@@ -17,11 +17,16 @@ idle_char_pos_x, idle_char_pos_y = screen_width//2, screen_height//2
 
 gravity = 1
 
+clock = pygame.time.Clock()
+
 def load_images():
     global idle_char
     screen.blit(idle_char, (idle_char_pos_x, idle_char_pos_y))
 
 def main():
+
+    FPS = 60
+
     global running, idle_char, idle_char_pos_x, idle_char_pos_y
     while running:
         for event in pygame.event.get():
@@ -44,6 +49,7 @@ def main():
             idle_char_pos_y -= 5
 
         pygame.display.update()
+        clock.tick(FPS)
 
 if __name__ == '__main__':
     main()
