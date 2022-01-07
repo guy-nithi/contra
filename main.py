@@ -48,7 +48,6 @@ def main():
                 sys.exit(0)
             screen.fill('black')
             load_images()
-            # test()
         check_collision()
 
         idle_char_pos_y += GRAVITY
