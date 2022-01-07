@@ -25,8 +25,6 @@ def load_images():
     global idle_char
     screen.blit(idle_char, (idle_char_pos_x, idle_char_pos_y))
 
-# def test():
-
 def check_collision():
     global rect_platform
     pygame.draw.rect(screen, (255, 255, 255), rect_platform)
